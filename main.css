@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    margin: 5%;
+}
+
+form {
+    display: inline-block;
+    width: 100%;
+}
+
+div {
+    margin: auto;
+}
+
+.formContainer {
+    width: 70%;
+    align-content: center;
+}
