@@ -16,10 +16,21 @@
 
 
     <div class="formContainer">
-        <form><input>
+        <form id="school-search-form">
+            <label for="search-term">Search term</label>
+            <input placeholder="Enter City or Zip" type="text" name="search-term" id="js-search-term" required>
+
+            <label for="state">State</label>
+            <input placeholder="Enter State Abbreviation" type="text" name="state" id="js-state" required>
+
             <button type="submit">Submit</button></form>
     </div>
 
+    <container id='results-list'></container>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
