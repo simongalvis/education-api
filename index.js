@@ -5,9 +5,7 @@ function submitform() {
     })
 }
 'use strict';
-
-
-const apiKey = '0e8c31eab44ec4fa6ae11abfbd01ecb9';
+const apiKey = '';
 const appID = 'ccda50fa';
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
 var state = $();
