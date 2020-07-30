@@ -5,8 +5,10 @@ function submitform() {
     })
 }
 'use strict';
-const apiKey = '';
-const appID = 'ccda50fa';
+
+
+const apiKey = '2baff53cae2d4ab826a5355443a529ba';
+const appID = '095e8d22';
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
 var state = $();
 
@@ -16,14 +18,13 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 
-function findSchools(query, state, schoolLevel) {
+function findSchools(query, state) {
     const params = {
         appKey: apiKey,
         appID: appID,
         q: query,
         st: state,
-        perPage: 50,
-        level: schoolLevel
+        perPage: 50
 
     };
     const queryString = formatQueryParams(params);
@@ -46,18 +47,12 @@ function findSchools(query, state, schoolLevel) {
 
 
 function displayResults(responseJson) {
-
     console.log(responseJson);
     $('#results-list').empty();
-    // iterate through the items array
     for (let i = 0; i < responseJson.schoolList.length; i++) {
-
-
-        $("#results-list").append(
-            `<li>${responseJson.schoolList[i].schoolName}<br>
-           <a href=' ${responseJson.schoolList[i].schoolName}'>Click here for more info</a>
-             </li>`
-        );
+        $("#results-list").append(`<li><div class="list-item-content"> ${responseJson.schoolList[i].schoolName} <br>
+          ${responseJson.schoolList[i].phone} <br>
+           <a href ="${responseJson.schoolList[i].url}">School Info Link</a> </div> </li>`);
     }
 
 }

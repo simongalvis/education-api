@@ -23,7 +23,23 @@ div {
     margin: auto;
 }
 
+ul {
+    list-style-position: outside;
+    vertical-align: top;
+}
+
+container {
+    display: inline-block;
+    text-align: left;
+}
+
 .formContainer {
     width: 70%;
-    align-content: center;
+    display: inline-block;
+    text-align: left;
+}
+
+.list-item-content {
+    display: inline-block;
+    text-align: left;
 }
