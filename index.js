@@ -7,8 +7,8 @@ function submitform() {
 'use strict';
 
 
-const apiKey = '2baff53cae2d4ab826a5355443a529ba';
-const appID = '095e8d22';
+const apiKey = '0e8c31eab44ec4fa6ae11abfbd01ecb9';
+const appID = 'ccda50fa';
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
 var state = $();
 
@@ -18,13 +18,14 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 
-function findSchools(query, state) {
+function findSchools(query, state, schoolLevel) {
     const params = {
         appKey: apiKey,
         appID: appID,
         q: query,
         st: state,
-        perPage: 50
+        perPage: 50,
+        level: schoolLevel
 
     };
     const queryString = formatQueryParams(params);
@@ -55,7 +56,9 @@ function displayResults(responseJson) {
 
 
         $("#results-list").append(
-            `<li>${responseJson.schoolList[i].schoolName} </li>`
+            `<li>${responseJson.schoolList[i].schoolName}<br>
+           <a href=' ${responseJson.schoolList[i].schoolName}'>Click here for more info</a>
+             </li>`
         );
     }
 
