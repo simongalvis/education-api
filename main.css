@@ -4,6 +4,9 @@
 
 body {
     text-align: center;
+    background-image: url("images/pencil-shavings.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
