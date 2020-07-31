@@ -17,6 +17,7 @@ header {
 form {
     display: inline-block;
     width: 100%;
+    margin: 5% 0;
 }
 
 div {
@@ -25,7 +26,13 @@ div {
 
 ul {
     list-style-position: outside;
-    vertical-align: topgit push;
+    position: relative;
+    vertical-align: top;
+}
+
+li {
+    margin: 5% 0;
+    list-style-type: circle;
 }
 
 container {
@@ -40,4 +47,5 @@ container {
 .list-item-content {
     display: inline-block;
     text-align: left;
+    vertical-align: text-top;
 }

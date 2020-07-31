@@ -7,8 +7,8 @@ function submitform() {
 'use strict';
 
 
-const apiKey = '2baff53cae2d4ab826a5355443a529ba';
-const appID = '095e8d22';
+const apiKey = '';
+const appID = '';
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
 var state = $();
 
@@ -50,9 +50,11 @@ function displayResults(responseJson) {
     console.log(responseJson);
     $('#results-list').empty();
     for (let i = 0; i < responseJson.schoolList.length; i++) {
-        $("#results-list").append(`<li><div class="list-item-content"> ${responseJson.schoolList[i].schoolName} <br>
-          ${responseJson.schoolList[i].phone} <br>
-           <a href ="${responseJson.schoolList[i].url}">School Info Link</a> </div> </li>`);
+        $("#results-list").append(`<li><div class="list-item-content">Name: ${responseJson.schoolList[i].schoolName} <br>
+        Grade Level(s): ${responseJson.schoolList[i].lowGrade} -  ${responseJson.schoolList[i].highGrade}<br>
+        Private School: ${responseJson.schoolList[i].isPrivate} <br>
+          Phone #: ${responseJson.schoolList[i].phone} <br>
+           More Info: <a href ="${responseJson.schoolList[i].url}" target = '_blank' >School Info Link</a> </div> </li>`);
     }
 
 }
