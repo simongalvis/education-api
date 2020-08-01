@@ -10,34 +10,38 @@
 </head>
 
 <body>
-    <header>
-        <h1>School Finder</h1>
-    </header>
+    <div class="backgroundImage">
+        <div class="layer">
+            <header>
+                <h1>School Finder</h1>
+            </header>
 
 
-    <div class="formContainer">
-        <form id="school-search-form" class="group">
-            <label for="search-term">City or School Name</label>
-            <input placeholder="Enter City or School Name (Example: 'Orlando') " type="text" name="search-term" id="js-search-term" required>
+            <div class="formContainer">
+                <form id="school-search-form" class="group">
+                    <label for="search-term">City or School Name</label>
+                    <input placeholder="Enter City or School Name (Example: 'Orlando') " type="text" name="search-term" id="js-search-term" required>
 
-            <label for="state">State</label>
-            <input placeholder="Enter State Abbreviation (Example: 'FL')" type="text" name="state" id="js-state" autocomplete="off" required>
+                    <label for="state">State</label>
+                    <input placeholder="Enter State Abbreviation (Example: 'FL')" type="text" name="state" id="js-state" autocomplete="off" required>
 
-            <!--<label for="state">School Level</label>
+                    <!--<label for="state">School Level</label>
             <input placeholder="Ex: Elementary" type="text" name="schoolLevel" id="js-schoolLevel" required>-->
 
 
 
 
 
-            <button type="submit">Submit</button></form>
+                    <button type="submit">Submit</button></form>
+            </div>
+
+            <container id='results-list'></container>
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+            <script src="index.js"></script>
+        </div>
     </div>
-
-    <container id='results-list'></container>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
 </body>
 
 </html>
