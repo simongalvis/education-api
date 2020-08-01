@@ -7,8 +7,8 @@ function submitform() {
 'use strict';
 
 
-const apiKey = '0e8c31eab44ec4fa6ae11abfbd01ecb9';
-const appID = 'ccda50fa';
+const apiKey = '2baff53cae2d4ab826a5355443a529ba';
+const appID = '095e8d22';
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
 var state = $();
 
