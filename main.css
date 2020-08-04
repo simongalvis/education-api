@@ -3,79 +3,257 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 html,
 body {
     margin: 0;
-    height: 100%;
     width: 100%;
+    font-family: sans-serif;
+    overflow: auto;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Sniglet', cursive;
-    font-size: 52px;
-    margin: 0;
-    padding: 5% 0;
-}
-
-header {
-    margin: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
 }
 
 form {
-    display: inline-block;
-    width: 100%;
-    margin: 0;
+    width: 300px;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-div {
-    margin: auto;
+form input {
+    width: 100%;
+    height: 100%;
+    color: hsl(146, 92%, 33%);
+    padding: 40px 0 0 0;
+    border: none;
+    outline: none;
+    border-radius: .3px;
+    background-color: transparent;
+    font-size: 33px;
+}
+
+footer {
+    margin: 3% 0;
+    font-size: 21px;
+}
+
+.name-form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: .7px solid black;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.state-form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: .7px solid black;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.name-form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid hsl(146, 88%, 36%);
+    transform: translateX(-100%);
+}
+
+.state-form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid hsl(146, 88%, 36%);
+    transform: translateX(-100%);
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all .3s ease;
+}
+
+form input:focus+.label-name .content-name,
+form input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 17px;
+    color: hsl(146, 92%, 23%)
+}
+
+form input:focus+.label-name::after,
+form input:valid+.label-name::after {
+    transform: translateX(0%);
+    transition: transform .3s ease;
+}
+
+.state-form,
+.name-form {
+    height: 70px;
+    width: 100%;
+    position: relative;
+    margin: 7% 0;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 52px;
+    margin: 0;
+    padding: 5%;
+    top: 0;
+    text-shadow: 0 0 2px black;
+    width: 100%;
+}
+
+a {
+    text-shadow: 0 0 1px black;
+}
+
+a:link {
+    color: hsl(146, 88%, 39%);
+}
+
+a:visited {
+    color: hsl(146, 81%, 35%);
+}
+
+a:hover {
+    color: hsl(146, 98%, 65%);
+}
+
+a:active {
+    color: #fff;
 }
 
 ul {
     list-style-position: outside;
-    position: relative;
-    vertical-align: top;
 }
 
 li {
-    margin: 5% 0;
-    list-style-type: circle;
+    margin: 0;
+    list-style-type: none;
+    border: 1px hsl(146, 92%, 33%) solid;
+    background-color: hsl(147, 4%, 50%, .7);
+    color: rgba(255, 255, 255, 0.795);
+    padding: 1%;
+    border-radius: 10px;
+    height: auto;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
-container {
-    display: inline-block;
-    text-align: left;
-}
-
-.formContainer {
-    width: 70%;
-}
-
-.list-item-content {
-    display: inline-block;
-    text-align: left;
-    vertical-align: text-top;
-}
-
-.group {
-    display: flex;
-    flex-direction: column;
+li:hover {
+    transition: background-color 0.5s ease;
+    background-color: hsl(147, 4%, 30%, .9);
 }
 
 .backgroundImage {
     background-image: url("images/pencil-shavings.jpg");
     background-size: cover;
-    height: 100%;
+    background-position: center;
+    min-height: 100vh;
     width: 100%;
+    overflow-y: scroll;
+    overflow: visible;
+    background-attachment: fixed;
 }
 
 .layer {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#results-list {
+    column-count: 1;
+    margin-top: 5%;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    width: 80%;
+}
+
+#submit-button {
+    width: 100%;
+    color: black;
+    border: black 2px solid;
+    background-color: transparent;
+    padding: 30px;
+    margin-top: 10%;
+    margin-bottom: 30%;
+    font-size: 28px;
+}
+
+#submit-button:hover {
+    transition: background-color 0.5s ease;
+    background-color: rgba(101, 109, 105, 0.2);
+    transition: border 0.5s ease;
+    border: 2px hsl(146, 92%, 33%) solid;
+}
+
+@media all and (min-width:800px) {
+    #results-list {
+        column-count: 2;
+        margin-top: 5%;
+        text-align: center;
+        padding: 0
+    }
+    h1 {
+        width: 700px;
+    }
+}
+
+@media all and (min-width: 480px) {
+    form {
+        width: 480px;
+    }
+    input {
+        width: 300px;
+        background-color: brown;
+    }
 }

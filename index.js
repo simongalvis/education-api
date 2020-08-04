@@ -12,7 +12,7 @@ function submitform() {
 // const appID = '095e8d22';
 
 
-const apiKey = '0e8c31eab44ec4fa6ae11abfbd01ecb9';
+const apiKey = 'aec6358aeeb22f6ce43a57db13ffb87e';
 const appID = 'ccda50fa';
 
 
@@ -57,13 +57,22 @@ function displayResults(responseJson) {
     console.log(responseJson);
     $('#results-list').empty();
     for (let i = 0; i < responseJson.schoolList.length; i++) {
-        $("#results-list").append(`<li><div class="list-item-content">Name: ${responseJson.schoolList[i].schoolName} <br>
+        $("#results-list").append(`<div class="item"><li><div class="list-item-content">Name: ${responseJson.schoolList[i].schoolName} <br>
         Grade Level(s): ${responseJson.schoolList[i].lowGrade} -  ${responseJson.schoolList[i].highGrade}<br>
         Private School: ${responseJson.schoolList[i].isPrivate} <br>
           Phone #: ${responseJson.schoolList[i].phone} <br>
            More Info: <a href ="${responseJson.schoolList[i].url}" target = '_blank' >School Info Link</a> </div> </li>`);
+        console.log("This function ran");
+        removeHidden();
     }
 
+}
+
+function removeHidden() {
+
+    $('footer').removeClass("hidden");
+
+    console.log("removeHidden Ran");
 }
 
 
@@ -77,6 +86,8 @@ function watchForm() {
         findSchools(searchTerm, searchState);
         console.log(searchState)
         $(".insertState").text(`Search results for ${searchTerm}`);
+        console.log('edede');
+
     });
 }
 

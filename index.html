@@ -13,29 +13,37 @@
     <div class="backgroundImage">
         <div class="layer">
             <header>
-                <h1>School Finder</h1>
+                <h1>School search, made easy</h1>
             </header>
 
 
-            <div class="formContainer">
-                <form id="school-search-form" class="group">
-                    <label for="search-term">City or School Name</label>
-                    <input placeholder="Enter City or School Name (Example: 'Orlando') " type="text" name="search-term" id="js-search-term" required>
+            <!-- <div class="formContainer"> -->
+            <form id="school-search-form" class="group">
+                <div class="name-form">
+                    <input class="label-name" paceholder="Enter City or School Name (Example: 'Orlando') " type="text" name="search-term" id="js-search-term" autocomplete="off" required>
+                    <label for="search-term" class="label-name"><span class="content-name"><b>City or School Name</b></span></label>
+                </div>
 
-                    <label for="state">State</label>
-                    <input placeholder="Enter State Abbreviation (Example: 'FL')" type="text" name="state" id="js-state" autocomplete="off" required>
-
-                    <!--<label for="state">School Level</label>
-            <input placeholder="Ex: Elementary" type="text" name="schoolLevel" id="js-schoolLevel" required>-->
-
-
-
+                <div class="state-form">
+                    <input paceholder="Enter State Abbreviation (Example: 'FL')" type="text" name="state" id="js-state" autocomplete="off" required>
+                    <label for="state" class="label-name"><span class="content-name"><b>State</b></span></label>
+                </div>
 
 
-                    <button type="submit">Submit</button></form>
-            </div>
 
-            <container id='results-list'></container>
+
+
+
+
+                <button type="submit" id="submit-button">Submit</button></form>
+            <!-- </div> -->
+
+            <ul id='results-list'></ul>
+
+
+            <footer class="hidden">
+                <a href="#top">Back to top of page ↑</a>
+            </footer>
 
 
             <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
