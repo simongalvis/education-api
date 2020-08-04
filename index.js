@@ -31,7 +31,7 @@ function findSchools(query, state) {
         appID: appID,
         q: query,
         st: state,
-        perPage: 50
+        perPage: 500
 
     };
     const queryString = formatQueryParams(params);
