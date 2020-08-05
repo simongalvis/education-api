@@ -1,8 +1,8 @@
 # EduFind
--A convenient school-search APP that allows the user to enter schoo name/city and a state in order to recieve a list of schools containing relevant school information
+- A convenient school search application that allows the user to enter school name/city and a state in order to receive a list of schools containing relevant information pertaining to each school
 
 ## Motivation:
--Growing up, I've been surrounded by family who hve a passion for education and school choice so I thought it would be great to build a tool for the purpose of school search
+- Growing up, I've been surrounded by family who have a passion for education and school choice so I thought it would be great to build a tool for the purpose of school search
 
 ## Screenshots
 - Landing Page:
