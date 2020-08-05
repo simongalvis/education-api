@@ -15,16 +15,19 @@ function submitform() {
 const apiKey = 'aec6358aeeb22f6ce43a57db13ffb87e';
 const appID = 'ccda50fa';
 
-
+S
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
 var state = $();
 
+
+//Format the query parameters
 function formatQueryParams(params) {
     const queryItems = Object.keys(params)
         .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
     return queryItems.join('&');
 }
 
+//Function taking in school name or city and state abbreviation
 function findSchools(query, state) {
     const params = {
         appKey: apiKey,
@@ -55,7 +58,7 @@ function findSchools(query, state) {
         });
 }
 
-
+//Results to DOM
 function displayResults(responseJson) {
     console.log(responseJson);
     $('#results-list').empty();
@@ -71,6 +74,7 @@ function displayResults(responseJson) {
 
 }
 
+//Remove hidden class from footer
 function removeHidden() {
 
     $('footer').removeClass("hidden");
