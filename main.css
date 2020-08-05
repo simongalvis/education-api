@@ -215,11 +215,16 @@ li:hover {
 
 #results-list {
     column-count: 1;
-    margin-top: 5%;
+    margin-top: 0%;
     text-align: center;
     padding: 0;
     position: relative;
     width: 80%;
+}
+
+#error-message {
+    width: 480px;
+    text-align: center;
 }
 
 #submit-button {
@@ -243,7 +248,7 @@ li:hover {
 @media all and (min-width:800px) {
     #results-list {
         column-count: 2;
-        margin-top: 5%;
+        margin-top: 0%;
         text-align: center;
         padding: 0
     }

@@ -42,13 +42,16 @@ function findSchools(query, state) {
     fetch(url)
         .then(response => {
             if (response.ok) {
+                $('#error-message').addClass("hidden");
                 return response.json();
             }
             throw new Error(response.statusText);
         })
         .then(responseJson => displayResults(responseJson))
         .catch(err => {
-            $("#error-message").text(`Something went wrong, please try again! ${err.message}`);
+            $("#error-message").text(`Something went wrong, please try again! For the 'State' section,
+             remember to enter an abbreviation such as 'FL' instead of 'Florida' ${err.message}`);
+            $('#error-message').removeClass("hidden");
         });
 }
 
