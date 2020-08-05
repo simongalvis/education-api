@@ -48,7 +48,7 @@ function findSchools(query, state) {
         })
         .then(responseJson => displayResults(responseJson))
         .catch(err => {
-            $("#js-error-message").text(`Something went wrong: ${err.message}`);
+            $("#error-message").text(`Something went wrong, please try again! ${err.message}`);
         });
 }
 
@@ -62,6 +62,7 @@ function displayResults(responseJson) {
         Private School: ${responseJson.schoolList[i].isPrivate} <br>
           Phone #: ${responseJson.schoolList[i].phone} <br>
            More Info: <a href ="${responseJson.schoolList[i].url}" target = '_blank' >School Info Link</a> </div> </li>`);
+
         console.log("This function ran");
         removeHidden();
     }
@@ -87,6 +88,7 @@ function watchForm() {
         console.log(searchState)
         $(".insertState").text(`Search results for ${searchTerm}`);
         console.log('edede');
+
 
     });
 }

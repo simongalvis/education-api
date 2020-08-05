@@ -140,6 +140,10 @@ h1 {
     width: 100%;
 }
 
+h3 {
+    color: red;
+}
+
 a {
     text-shadow: 0 0 1px black;
 }

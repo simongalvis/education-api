@@ -17,27 +17,33 @@
             </header>
 
 
-            <!-- <div class="formContainer"> -->
-            <form id="school-search-form" class="group">
-                <div class="name-form">
-                    <input class="label-name" paceholder="Enter City or School Name (Example: 'Orlando') " type="text" name="search-term" id="js-search-term" autocomplete="off" required>
-                    <label for="search-term" class="label-name"><span class="content-name"><b>City or School Name</b></span></label>
+            <div class="formContainer">
+                <form id="school-search-form" class="group">
+                    <div class="name-form">
+                        <input class="label-name" type="text" name="search-term" id="js-search-term" autocomplete="off" required>
+                        <label for="js-search-term" class="label-name"><span class="content-name"><b>City or School Name</b></span></label>
+                    </div>
+
+                    <div class="state-form">
+                        <input type="text" name="state" id="js-state" autocomplete="off" required>
+                        <label for="js-state" class="label-name"><span class="content-name"><b>State</b></span></label>
+                    </div>
+
+
+
+
+
+
+
+                    <button type="submit" id="submit-button"><a href="#results-list">Submit</a></button></form>
+            </div>
+
+
+            <h3>
+                <div id='error-message'>
+
                 </div>
-
-                <div class="state-form">
-                    <input paceholder="Enter State Abbreviation (Example: 'FL')" type="text" name="state" id="js-state" autocomplete="off" required>
-                    <label for="state" class="label-name"><span class="content-name"><b>State</b></span></label>
-                </div>
-
-
-
-
-
-
-
-                <button type="submit" id="submit-button">Submit</button></form>
-            <!-- </div> -->
-
+            </h3>
             <ul id='results-list'></ul>
 
 
