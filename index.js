@@ -65,7 +65,6 @@ function displayResults(responseJson) {
         Private School: ${responseJson.schoolList[i].isPrivate} <br>
           Phone #: ${responseJson.schoolList[i].phone} <br>
            More Info: <a href ="${responseJson.schoolList[i].url}" target = '_blank' >School Info Link</a> </div> </li>`);
-
         console.log("This function ran");
         removeHidden();
     }
@@ -91,7 +90,6 @@ function watchForm() {
         console.log(searchState)
         $(".insertState").text(`Search results for ${searchTerm}`);
         console.log('edede');
-
 
     });
 }
