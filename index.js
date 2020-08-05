@@ -61,9 +61,8 @@ function displayResults(responseJson) {
         $("#results-list").append(`<div class="item"><li><div class="list-item-content">Name: ${responseJson.schoolList[i].schoolName} <br>
         Grade Level(s): ${responseJson.schoolList[i].lowGrade} -  ${responseJson.schoolList[i].highGrade}<br>
         Private School: ${responseJson.schoolList[i].isPrivate} <br>
-          hone #: ${responseJson.schoolList[i].phone} <br>
+        Phone #: ${responseJson.schoolList[i].phone} <br>
         More Info: <a href ="${responseJson.schoolList[i].url}" target = '_blank' >School Info Link</a> </div> </li>`);
-
         removeHidden();
     }
 

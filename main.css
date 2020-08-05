@@ -146,13 +146,14 @@ h2 {
     margin: 0;
     top: 0;
     text-shadow: 0 0 2px black;
-    width: 600px;
+    width: 100%;
+    max-width: 580px;
 }
 
 h3 {
     color: red;
     margin: 0;
-    width: 380px;
+    width: 100%;
 }
 
 a {
