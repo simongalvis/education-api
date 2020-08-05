@@ -30,7 +30,6 @@ body {
 
 form {
     width: 300px;
-    margin-bottom: 5%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -134,14 +133,25 @@ h1 {
     text-align: center;
     font-size: 52px;
     margin: 0;
-    padding: 5%;
+    padding: 5% 0;
     top: 0;
     text-shadow: 0 0 2px black;
     width: 100%;
 }
 
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    top: 0;
+    text-shadow: 0 0 2px black;
+    width: 600px;
+}
+
 h3 {
     color: red;
+    margin: 0;
 }
 
 a {
@@ -166,13 +176,14 @@ a:active {
 
 ul {
     list-style-position: outside;
+    margin: 10% 0;
 }
 
 li {
     margin: 0;
     list-style-type: none;
     border: 1px hsl(146, 92%, 33%) solid;
-    background-color: hsl(147, 4%, 50%, .7);
+    background-color: hsl(147, 4%, 50%, .8);
     color: rgba(255, 255, 255, 0.795);
     padding: 1%;
     border-radius: 10px;
@@ -180,6 +191,7 @@ li {
     margin-bottom: 1rem;
     page-break-inside: avoid;
     break-inside: avoid;
+    font-size: 22px;
 }
 
 li:hover {
@@ -220,11 +232,14 @@ li:hover {
     padding: 0;
     position: relative;
     width: 80%;
+    margin: 10% 0;
 }
 
 #error-message {
     width: 480px;
     text-align: center;
+    margin: 10% 0;
+    padding: 0;
 }
 
 #submit-button {
@@ -234,7 +249,7 @@ li:hover {
     background-color: transparent;
     padding: 30px;
     margin-top: 10%;
-    margin-bottom: 30%;
+    margin-bottom: 10%;
     font-size: 28px;
 }
 
