@@ -47,8 +47,8 @@ function findSchools(query, state) {
         })
         .then(responseJson => displayResults(responseJson))
         .catch(err => {
-            $("#error-message").text(`Something went wrong, please try again! For the 'State' section,
-             remember to enter an abbreviation such as 'FL' instead of 'Florida' ${err.message}`);
+            $("#error-message").html(`<h3>Something went wrong, please try again! For the 'State' section,
+             remember to enter an abbreviation such as 'FL' instead of 'Florida' ${err.message}</h3>`);
             $('#error-message').removeClass("hidden");
         });
 }
