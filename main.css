@@ -157,11 +157,11 @@ h3 {
 }
 
 a {
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 0 1px rgb(0, 0, 0);
 }
 
 a:link {
-    color: hsl(146, 88%, 39%);
+    color: hsl(146, 100%, 38%);
 }
 
 a:visited {
@@ -185,7 +185,7 @@ li {
     margin: 0;
     list-style-type: none;
     border: 1px hsl(146, 92%, 33%) solid;
-    background-color: hsl(147, 4%, 50%, .8);
+    background-color: rgba(115, 121, 118, 0.8);
     color: rgba(255, 255, 255, 0.795);
     padding: 1%;
     border-radius: 10px;

@@ -70,7 +70,6 @@ function displayResults(responseJson) {
 //Remove hidden class from footer
 function removeHidden() {
     $('footer').removeClass("hidden");
-    console.log("removeHidden Ran");
 }
 
 function insertPlaceholder() {
@@ -98,7 +97,7 @@ function watchForm() {
         const searchTerm = $('#js-search-term').val();
         const searchState = $('#js-state').val();
         findSchools(searchTerm, searchState);
-        console.log(searchState)
+        console.log(searchState);
         $(".insertState").text(`Search results for ${searchTerm}`);
     });
 }
