@@ -47,7 +47,7 @@ function findSchools(query, state) {
         })
         .then(responseJson => displayResults(responseJson))
         .catch(err => {
-            $("#error-message").text(`Something went wrong, please try again! For the 'State' section, make sure that there are no spaces in your submission. ${err.message}`);
+            $("#error-message").text(`Something went wrong, please try again! For both input sections, make sure that there are no extra spaces in your submission. ${err.message}`);
             $('#error-message').removeClass("hidden");
         });
 }

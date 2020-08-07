@@ -161,11 +161,11 @@ a {
 }
 
 a:link {
-    color: hsl(146, 100%, 38%);
+    color: hsl(146, 80%, 48%);
 }
 
 a:visited {
-    color: hsl(146, 81%, 35%);
+    color: hsl(286, 46%, 55%);
 }
 
 a:hover {
