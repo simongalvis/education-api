@@ -47,8 +47,7 @@ function findSchools(query, state) {
         })
         .then(responseJson => displayResults(responseJson))
         .catch(err => {
-            $("#error-message").text(`Something went wrong, please try again! For the 'State' section,
-             remember to enter an abbreviation such as 'FL' instead of 'Florida' ${err.message}`);
+            $("#error-message").text(`Something went wrong, please try again! For the 'State' section, make sure that there are no spaces in your submission. ${err.message}`);
             $('#error-message').removeClass("hidden");
         });
 }
@@ -74,9 +73,26 @@ function removeHidden() {
     console.log("removeHidden Ran");
 }
 
+function insertPlaceholder() {
+
+    $('#js-search-term').focusin(function(event) {
+        $(this).attr('placeholder', 'Example: Denver');
+    });
+    $('#js-search-term').focusout(function(event) {
+        $(this).attr('placeholder', '');
+    });
+
+    $('#js-state').focusin(function(event) {
+        $(this).attr('placeholder', 'Example: "CO"');
+    });
+    $('#js-state').focusout(function(event) {
+        $(this).attr('placeholder', '');
+    });
+}
 
 
 function watchForm() {
+    insertPlaceholder();
     $('form').submit(event => {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();
