@@ -35,7 +35,7 @@ function findSchools(query, state) {
     const queryString = formatQueryParams(params);
     const url = searchURL + "?" + queryString;
 
-    console.log(url);
+
 
     fetch(url)
         .then(response => {
@@ -54,7 +54,7 @@ function findSchools(query, state) {
 
 //Results to DOM
 function displayResults(responseJson) {
-    console.log(responseJson);
+    // console.log(responseJson);
     $('#results-list').empty();
     for (let i = 0; i < responseJson.schoolList.length; i++) {
         $("#results-list").append(`<div class="item"><li><div class="list-item-content">Name: ${responseJson.schoolList[i].schoolName} <br>
@@ -72,10 +72,12 @@ function removeHidden() {
     $('footer').removeClass("hidden");
 }
 
+
+//Include placeholder text when form is clicked
 function insertPlaceholder() {
 
     $('#js-search-term').focusin(function(event) {
-        $(this).attr('placeholder', 'Example: Denver');
+        $(this).attr('placeholder', 'Example: "Denver"');
     });
     $('#js-search-term').focusout(function(event) {
         $(this).attr('placeholder', '');
@@ -97,7 +99,7 @@ function watchForm() {
         const searchTerm = $('#js-search-term').val();
         const searchState = $('#js-state').val();
         findSchools(searchTerm, searchState);
-        console.log(searchState);
+        //console.log(searchState);
         $(".insertState").text(`Search results for ${searchTerm}`);
     });
 }
