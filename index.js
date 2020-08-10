@@ -40,14 +40,22 @@ function findSchools(query, state) {
 
 
     fetch(url)
-        .then(response => {
+
+    .then(response => {
             if (response.ok) {
                 $('#error-message').addClass("hidden");
+                console.log(response);
                 return response.json();
             }
             throw new Error(response.statusText);
         })
-        .then(responseJson => displayResults(responseJson))
+        .then(responseJson => {
+            if (responseJson.numberOfSchools === 0) {
+                $("#error-message").html(`<b>We couldn't find any results based on your search, please try again! For both input sections, make sure that there are no extra spaces in your submission and double check that you're using correct spelling.</b>`);
+                $('#error-message').removeClass("hidden");
+            }
+            displayResults(responseJson)
+        })
         .catch(err => {
             $("#error-message").html(`<b>Something went wrong, please try again! For both input sections, make sure that there are no extra spaces in your submission.</b> ${err.message}`);
             $('#error-message').removeClass("hidden");
@@ -56,7 +64,8 @@ function findSchools(query, state) {
 
 //Results to DOM
 function displayResults(responseJson) {
-    // console.log(responseJson);
+    //console.log(responseJson);
+    //console.log(responseJson.numberOfSchools);
     $('#results-list').empty();
     for (let i = 0; i < responseJson.schoolList.length; i++) {
         $("#results-list").append(`<div class="item"><li><div class="list-item-content">Name: ${responseJson.schoolList[i].schoolName} <br>
