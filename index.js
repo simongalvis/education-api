@@ -11,6 +11,7 @@ function submitform() {
 
 const apiKey = 'aec6358aeeb22f6ce43a57db13ffb87e';
 const appID = 'ccda50fa';
+let userFriendlyPrivateSchoolBoolean = 'Yes';
 
 
 const searchURL = 'https://api.schooldigger.com/v1.2/schools';
@@ -54,6 +55,10 @@ function findSchools(query, state) {
                 $("#error-message").html(`<b>We couldn't find any results based on your search, please try again! For both input sections, make sure that there are no extra spaces in your submission and double check that you're using correct spelling.</b>`);
                 $('#error-message').removeClass("hidden");
             }
+
+
+
+            isPrivateFormatter(responseJson)
             displayResults(responseJson)
         })
         .catch(err => {
@@ -62,9 +67,17 @@ function findSchools(query, state) {
         });
 }
 
+//Changes user result of Private School from "true" or "false" to "Yes" or "No"
+function isPrivateFormatter(responseJson) {
+    for (let i = 0; i < responseJson.schoolList.length; i++) {
+        if (responseJson.schoolList[i].isPrivate === false) {
+            responseJson.schoolList[i].isPrivate = 'No';
+        } else responseJson.schoolList[i].isPrivate = 'Yes';
+    }
+}
 //Results to DOM
 function displayResults(responseJson) {
-    //console.log(responseJson);
+    console.log(responseJson);
     //console.log(responseJson.numberOfSchools);
     $('#results-list').empty();
     for (let i = 0; i < responseJson.schoolList.length; i++) {
