@@ -150,10 +150,11 @@ h2 {
     max-width: 580px;
 }
 
-h3 {
+#error-message {
     color: red;
     margin: 0;
     width: 100%;
+    font-size: 21px;
 }
 
 a {
