@@ -1,10 +1,12 @@
+'use strict';
+
 function submitform() {
     $('#school-search-form').on('submit', function(event) {
         event.preventDefalt();
 
     })
 }
-'use strict';
+
 
 
 const apiKey = 'aec6358aeeb22f6ce43a57db13ffb87e';
