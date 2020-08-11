@@ -150,13 +150,6 @@ h2 {
     max-width: 580px;
 }
 
-#error-message {
-    color: red;
-    margin: 0;
-    width: 100%;
-    font-size: 21px;
-}
-
 a {
     text-shadow: 0 0 1px rgb(0, 0, 0);
 }
@@ -239,10 +232,14 @@ li:hover {
 }
 
 #error-message {
-    width: 370px;
+    width: 300px;
     text-align: center;
     margin: 10% 0;
     padding: 0;
+    color: red;
+    margin: 0;
+    width: 100%;
+    font-size: 21px;
 }
 
 #submit-button {
@@ -276,7 +273,8 @@ li:hover {
 }
 
 @media all and (min-width: 480px) {
-    form {
+    form,
+    #error-message {
         width: 480px;
     }
     input {

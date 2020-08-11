@@ -56,9 +56,6 @@ function findSchools(query, state) {
                 $("#error-message").html(`<b>We couldn't find any results based on your search, please try again! For both input sections, make sure that there are no extra spaces in your submission and double check that you're using correct spelling.</b>`);
                 $('#error-message').removeClass("hidden");
             }
-
-
-
             isPrivateFormatter(responseJson)
             displayResults(responseJson)
         })
