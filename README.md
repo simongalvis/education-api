@@ -1,7 +1,7 @@
 # EduFind
 - A convenient school search application that allows the user to enter school name/city and a state in order to receive a list of schools containing relevant information pertaining to each school
 
-# Link to live app
+## Link to live app
 - http://simongalvis.com/education-api/
 
 ## Motivation
