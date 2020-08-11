@@ -3,6 +3,7 @@
 
 # Link to live app
 - http://simongalvis.com/education-api/
+
 ## Motivation
 - Growing up, I've been surrounded by family who have a passion for education and school choice so I thought it would be great to build a tool for the purpose of school search
 
